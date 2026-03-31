@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>align-self</title>
+    <style>
+      .container {
+        border: 1px solid black;
+        width: 600px;
+        height: 300px;
+        display: flex;
+        flex-direction: row;
+      }
+      .item {
+        padding: 5px 45px;
+        margin: 5px;
+      }
+      .item1 {
+        background: red;
+        align-self: flex-start;
+      }
+      .item2 {
+        background: orange;
+        align-self: flex-end;
+      }
+      .item3 {
+        background: yellow;
+        align-self: center;
+      }
+      .item4 {
+        background: green;
+        align-self: baseline;
+      }
+      .item5 {
+        background: blue;
+        align-self: stretch;
+      }
+      /* 각item의font-size를다르게적용*/
+      .item1 p {
+        font-size: 16px;
+      }
+      .item2 p {
+        font-size: 28px;
+      }
+      .item3 p {
+        font-size: 40px;
+      }
+      .item4 p {
+        font-size: 22px;
+      }
+      .item5 p {
+        font-size: 60px;
+      }
+      /* 각item에baseline 적용*/
+      .b {
+        align-self: baseline;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>align-self</h1>
+    <div class="container">
+      <div class="item item1"><p>1</p></div>
+      <div class="item item2"><p>2</p></div>
+      <div class="item item3"><p>3</p></div>
+      <div class="item item4"><p>4</p></div>
+      <div class="item item5"><p>5</p></div>
+    </div>
+    <h1>align-self: baseline</h1>
+    <div class="container">
+      <div class="item item1 b"><p>1</p></div>
+      <div class="item item2 b"><p>2</p></div>
+      <div class="item item3 b"><p>3</p></div>
+      <div class="item item4 b"><p>4</p></div>
+      <div class="item item5 b"><p>5</p></div>
+    </div>
+  </body>
+</html>

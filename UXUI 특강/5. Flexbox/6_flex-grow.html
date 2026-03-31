@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      .container {
+        border: 1px solid black;
+        display: flex;
+      }
+      .item {
+        padding: 5px 45px;
+        margin: 5px;
+      }
+      .item1 {
+        background: red;
+        flex-grow: 1;
+      }
+      .item2 {
+        background: orange;
+        flex-grow: 2;
+      }
+      .item3 {
+        background: yellow;
+        flex-grow: 3;
+      }
+
+      .container2 {
+        /* 부모영역 width: 500 */
+        width: 500px;
+        border: 1px solid black;
+        background: white;
+        display: flex;
+      }
+      .itemA {
+        border: 1px solid black;
+      }
+      .itema {
+        background: red;
+        /* 최초 크기 width: 100px */
+        flex-basis: 100px;
+      }
+      .itemb {
+        background: orange;
+        /* 최초 크기 width: 100px */
+        flex-basis: 100px;
+      }
+
+      .itemc {
+        background: red;
+        flex-basis: 100px;
+        /* 남는 영역(300) 1대1의 비율로 나눠가짐, width: 250(100 + 150) */
+        flex-grow: 1;
+      }
+      .itemd {
+        background: orange;
+        flex-basis: 100px;
+        /* 남는 영역 1대1의 비율로 나눠가짐, width: 250(100 + 150) */
+        flex-grow: 1;
+      }
+
+      .iteme {
+        background: red;
+        flex-basis: 200px;
+        /* 남는 영역(200) 1대1의 비율로 나눠가짐 
+        red width: 300(200 + 100) 
+        orange width: 200(100 + 100)*/
+        flex-grow: 1;
+      }
+
+      .itemf {
+        background: red;
+        /* 최초크기 0 -> 남는영역 (500) 
+        red, orange width: 250*/
+        flex-basis: 0;
+        flex-grow: 1;
+      }
+      .itemg {
+        background: orange;
+        flex-basis: 0;
+        flex-grow: 1;
+      }
+
+      .itemB {
+        border: 1px solid black;
+        /* flex:1 => grow: 1, shrink: 1, basis: 0 */
+        flex: 1;
+      }
+      .itemh {
+        background: red;
+        /* 한 요소에만 flex: 1 적용 
+        -> 다른 요소는 content만큼의 자리 가짐
+        -> 적용한 요소는 남는자리 다 가짐 */
+        /* flex: 1; */
+      }
+      .itemi {
+        background: orange;
+      }
+
+      .itemC {
+        border: 1px solid black;
+        /* 우선순위 basis(0) > width(100) */
+        flex: 1;
+        width: 100px;
+      }
+
+      .itemD {
+        border: 1px solid black;
+        width: 400px;
+        /* 
+        부모: 500px, 자식: 800px(400 * 2) 
+        부족한 공간 300px을 1대1의 비율로 나누어 줄임
+        
+        red width: 250px (400 - 150) 
+        orange width: 250px (400 - 150) 
+        */
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>flex-grow</h1>
+    <div class="container">
+      <div class="item item1">
+        <p>1</p>
+      </div>
+      <div class="item item2">
+        <p>2</p>
+      </div>
+      <div class="item item3">
+        <p>3</p>
+      </div>
+    </div>
+
+    <h1>flex-basis</h1>
+    <div class="container2">
+      <div class="itemA itema">1 (100px)</div>
+      <div class="itemA itemb">2 (100px)</div>
+    </div>
+
+    <h1>flex-basis with flex-grow</h1>
+    <div class="container2">
+      <div class="itemA itemc">1 (250px)</div>
+      <div class="itemA itemd">2 (250px)</div>
+    </div>
+
+    <h1>flex-basis with flex-grow2</h1>
+    <div class="container2">
+      <div class="itemA iteme">1 (300px)</div>
+      <div class="itemA itemd">2 (200px)</div>
+    </div>
+
+    <h1>flex-basis with flex-grow3</h1>
+    <div class="container2">
+      <div class="itemA itemf">1 (250px)</div>
+      <div class="itemA itemg">2 (250px)</div>
+    </div>
+
+    <h1>flex: 1</h1>
+    <div class="container2">
+      <div class="itemB itemh">1 (250px)</div>
+      <div class="itemB itemi">2 (250px)</div>
+    </div>
+
+    <h1>width vs flex-basis</h1>
+    <div class="container2">
+      <div class="itemC itemh">1 (250px)</div>
+      <div class="itemC itemi">2 (250px)</div>
+    </div>
+
+    <h1>flex-shrink</h1>
+    <div class="container2">
+      <div class="itemD itemh">1 (250px)</div>
+      <div class="itemD itemi">2 (250px)</div>
+    </div>
+  </body>
+</html>

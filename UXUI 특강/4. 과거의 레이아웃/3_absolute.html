@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script></script>
+  </head>
+
+  <body>
+    <h1>절대 배치, absolute</h1>
+    <hr />
+    <div class="parent">
+      <div class="child1"></div>
+      <div class="child2"></div>
+      <div class="child3"></div>
+    </div>
+  </body>
+</html>
+
+<style>
+  .parent {
+    position: relative;
+  }
+  .child1 {
+    position: absolute;
+    background: red;
+    width: 100px;
+    height: 100px;
+    left: 5px;
+    top: 20px;
+  }
+  .child2 {
+    position: absolute;
+    background: green;
+    width: 100px;
+    height: 100px;
+    left: 45px;
+    top: 60px;
+  }
+  .child3 {
+    position: absolute;
+    background: blue;
+    width: 100px;
+    height: 100px;
+    left: 85px;
+    top: 100px;
+  }
+</style>

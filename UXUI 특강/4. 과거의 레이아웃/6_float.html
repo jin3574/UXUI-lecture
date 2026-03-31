@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>float</title>
+  </head>
+
+  <body>
+    <div class="box left">left</div>
+    <p class="text">
+      float는 요소를 한쪽으로 이동시키고,
+      텍스트가그주변을감싸며배치되도록만드는속성입니다.
+    </p>
+    <br />
+    <br />
+    <br />
+    <div class="box right">right</div>
+    <p class="text">
+      float는 요소를 한쪽으로 이동시키고,
+      텍스트가그주변을감싸며배치되도록만드는속성입니다.
+    </p>
+    <br />
+    <div class="box none">none</div>
+    <p class="text">
+      float는 요소를 한쪽으로 이동시키고,
+      텍스트가그주변을감싸며배치되도록만드는속성입니다.
+    </p>
+    <br />
+    <div class="box left">clear left</div>
+    <p class="text clear-left">
+      float는 요소를 한쪽으로 이동시키고,
+      텍스트가그주변을감싸며배치되도록만드는속성입니다.
+    </p>
+    <br />
+    <div class="box right">clear right</div>
+    <p class="text clear-right">
+      float는 요소를 한쪽으로 이동시키고,
+      텍스트가그주변을감싸며배치되도록만드는속성입니다.
+    </p>
+    <br />
+  </body>
+</html>
+
+<style>
+  .box {
+    width: 100px;
+    height: 100px;
+    background: red;
+    color: white;
+  }
+  .left {
+    float: left;
+  }
+  .right {
+    float: right;
+  }
+  .none {
+    /* none: default */
+    /* block 태그의 특징으로 여백 생성 */
+    float: none;
+  }
+
+  .text {
+    border: 1px solid black;
+  }
+
+  /* box 옆에 붙지 않고 아래에 글 배치 */
+  .clear-left {
+    clear: left;
+  }
+  .clear-right {
+    clear: right;
+  }
+</style>

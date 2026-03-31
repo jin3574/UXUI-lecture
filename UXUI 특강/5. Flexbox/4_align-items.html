@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>align-items</title>
+    <style>
+      .container1 {
+        border: 1px solid black;
+        width: 600px;
+        height: 300px;
+        display: flex;
+        /* 주축: 가로, 교차축: 세로 */
+        flex-direction: row;
+        /* 교차축의 시작점(부모 왼쪽상단)에 배치 */
+        align-items: flex-start;
+      }
+      .container2 {
+        border: 1px solid black;
+        width: 600px;
+        height: 300px;
+        display: flex;
+        flex-direction: row;
+        /* 교차축의 끝점(부모 왼쪽하단)에 배치 */
+        align-items: flex-end;
+      }
+      .container3 {
+        border: 1px solid black;
+        width: 600px;
+        height: 300px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+      .container4 {
+        border: 1px solid black;
+        width: 600px;
+        height: 300px;
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+      }
+      .item {
+        padding: 5px 45px;
+        margin: 5px;
+      }
+      .item1 {
+        background: red;
+        height: 100px;
+      }
+      .item2 {
+        background: orange;
+        height: 150px;
+      }
+      .item3 {
+        background: yellow;
+        height: 100px;
+        font-size: 30px;
+      }
+      .item4 {
+        background: green;
+        height: 50px;
+      }
+      .item5 {
+        background: blue;
+        height: 100px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>align-items: flex-start</h1>
+    <div class="container1">
+      <div class="item item1"><p>1</p></div>
+      <div class="item item2"><p>2</p></div>
+      <div class="item item3"><p>3</p></div>
+      <div class="item item4"><p>4</p></div>
+      <div class="item item5"><p>5</p></div>
+    </div>
+    <h1>align-items: flex-end</h1>
+    <div class="container2">
+      <div class="item item1"><p>1</p></div>
+      <div class="item item2"><p>2</p></div>
+      <div class="item item3"><p>3</p></div>
+      <div class="item item4"><p>4</p></div>
+      <div class="item item5"><p>5</p></div>
+    </div>
+    <h1>align-items: center</h1>
+    <div class="container3">
+      <div class="item item1"><p>1</p></div>
+      <div class="item item2"><p>2</p></div>
+      <div class="item item3"><p>3</p></div>
+      <div class="item item4"><p>4</p></div>
+      <div class="item item5"><p>5</p></div>
+    </div>
+    <h1>align-items: baseline</h1>
+    <div class="container4">
+      <div class="item item1"><p>1</p></div>
+      <div class="item item2"><p>2</p></div>
+      <div class="item item3"><p>3</p></div>
+      <div class="item item4"><p>4</p></div>
+      <div class="item item5"><p>5</p></div>
+    </div>
+  </body>
+</html>

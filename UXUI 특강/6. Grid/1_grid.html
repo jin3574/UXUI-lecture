@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      .container {
+        border: 2px solid black;
+        display: grid;
+      }
+      .container > div {
+        border: 1px solid gray;
+      }
+
+      .col {
+        grid-template-columns: 100px 100px 100px;
+      }
+
+      .row {
+        grid-template-rows: 80px 80px;
+      }
+
+      .gap {
+        gap: 10px;
+      }
+
+      .fr {
+        /* 남는 공간을 fr단위(비율)로 나눔 */
+        grid-template-columns: 1fr 2fr 3fr;
+      }
+
+      .frpx {
+        /* fr(남는크기)와 px(고정크기) 같이 사용 가능 */
+        grid-template-columns: 100px 1fr 100px;
+      }
+
+      .re {
+        /* width 100px인 3 column */
+        grid-template-columns: repeat(3, 100px);
+      }
+
+      .re2 {
+        /* 1대2비율의 width 3번 반복 */
+        grid-template-columns: repeat(3, 1fr 2fr);
+      }
+
+      .mm {
+        /* 최소 width 1000px 유지, 화면크기 작아지면 overflow */
+        grid-template-columns: minmax(1000px, 1fr);
+      }
+
+      .rm {
+        /* 4개 column 최소 width 200px 유지, 남는공간 균등분배 (화면 크기 작아지면 overflow) */
+        grid-template-columns: repeat(4, minmax(200px, 1fr));
+      }
+
+      .rm2 {
+        /* column 최소 width 200px 유지, 남는공간 균등분배 (화면크기에 맞춰 column 배치) */
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+    </div>
+
+    <h1>column 생성</h1>
+    <div class="container col">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+    </div>
+
+    <h1>row 크기 지정</h1>
+    <div class="container col row">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+    </div>
+
+    <h1>간격(gap) 지정</h1>
+    <div class="container col row gap">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+    </div>
+
+    <h1>fr(fraction) 단위 지정</h1>
+    <div class="container fr row">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+    </div>
+
+    <h1>fr, px 동시사용</h1>
+    <div class="container frpx row">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+    </div>
+
+    <h1>repeat 반복</h1>
+    <div class="container re row">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+    </div>
+
+    <h1>repeat 반복2</h1>
+    <div class="container re2 row">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+    </div>
+
+    <h1>minmax</h1>
+    <div class="container mm">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+    </div>
+
+    <h1>repeat + minmax</h1>
+    <div class="container rm">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+    </div>
+
+    <h1>repeat + minmax 2</h1>
+    <div class="container rm2">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+    </div>
+  </body>
+</html>

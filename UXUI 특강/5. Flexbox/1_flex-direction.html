@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>flex-direction</title>
+    <style>
+      /* 
+      flex 없으면 위에서 아래로 쌓임 
+      flex-direction 생략시 default: row
+      */
+      .container1 {
+        border: 1px solid black;
+        display: flex;
+      }
+      .container2 {
+        border: 1px solid black;
+        display: flex;
+        flex-direction: row;
+      }
+      .container3 {
+        border: 1px solid black;
+        display: flex;
+        flex-direction: row-reverse;
+      }
+      .container4 {
+        border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+      }
+      .container5 {
+        border: 1px solid black;
+        display: flex;
+        flex-direction: column-reverse;
+      }
+      .item {
+        /* width 없으면 부모 만큼 다 차지 */
+        padding: 5px 45px;
+        margin: 5px;
+      }
+      .itemA {
+        padding: 5px 45px;
+        margin: 5px;
+        width: 100px;
+      }
+      .item1 {
+        background: red;
+      }
+      .item2 {
+        background: orange;
+      }
+      .item3 {
+        background: yellow;
+      }
+      .item4 {
+        background: green;
+      }
+      .item5 {
+        background: blue;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>flex-direction default</h1>
+    <div class="container1">
+      <div class="item item1"><p>1</p></div>
+      <div class="item item2"><p>2</p></div>
+      <div class="item item3"><p>3</p></div>
+      <div class="item item4"><p>4</p></div>
+      <div class="item item5"><p>5</p></div>
+    </div>
+
+    <h1>flex-direction: row</h1>
+    <div class="container2">
+      <div class="item item1"><p>1</p></div>
+      <div class="item item2"><p>2</p></div>
+      <div class="item item3"><p>3</p></div>
+      <div class="item item4"><p>4</p></div>
+      <div class="item item5"><p>5</p></div>
+    </div>
+
+    <h1>flex-direction: row-reverse</h1>
+    <div class="container3">
+      <div class="item item1"><p>1</p></div>
+      <div class="item item2"><p>2</p></div>
+      <div class="item item3"><p>3</p></div>
+      <div class="item item4"><p>4</p></div>
+      <div class="item item5"><p>5</p></div>
+    </div>
+
+    <h1>flex-direction: column</h1>
+    <div class="container4">
+      <div class="item item1"><p>1</p></div>
+      <div class="item item2"><p>2</p></div>
+      <div class="item item3"><p>3</p></div>
+      <div class="item item4"><p>4</p></div>
+      <div class="item item5"><p>5</p></div>
+    </div>
+
+    <h1>flex-direction: column, .item {width: 100px}</h1>
+    <div class="container4">
+      <div class="itemA item1"><p>1</p></div>
+      <div class="itemA item2"><p>2</p></div>
+      <div class="itemA item3"><p>3</p></div>
+      <div class="itemA item4"><p>4</p></div>
+      <div class="itemA item5"><p>5</p></div>
+    </div>
+
+    <h1>flex-direction: column-reverse</h1>
+    <div class="container5">
+      <div class="item item1"><p>1</p></div>
+      <div class="item item2"><p>2</p></div>
+      <div class="item item3"><p>3</p></div>
+      <div class="item item4"><p>4</p></div>
+      <div class="item item5"><p>5</p></div>
+    </div>
+
+    <h1>flex-direction: column-reverse, .item {width: 100px}</h1>
+    <div class="container5">
+      <div class="itemA item1"><p>1</p></div>
+      <div class="itemA item2"><p>2</p></div>
+      <div class="itemA item3"><p>3</p></div>
+      <div class="itemA item4"><p>4</p></div>
+      <div class="itemA item5"><p>5</p></div>
+    </div>
+  </body>
+</html>

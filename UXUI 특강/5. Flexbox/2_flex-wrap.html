@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>flex-wrap</title>
+    <style>
+      .container1 {
+        border: 1px solid black;
+        display: flex;
+        flex-wrap: nowrap;
+      }
+      .container2 {
+        border: 1px solid black;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .container3 {
+        border: 1px solid black;
+        display: flex;
+        flex-wrap: wrap-reverse;
+      }
+      .item {
+        padding: 5px 45px;
+        margin: 5px;
+      }
+      .item1 {
+        background: red;
+      }
+      .item2 {
+        background: orange;
+      }
+      .item3 {
+        background: yellow;
+      }
+      .item4 {
+        background: green;
+      }
+      .item5 {
+        background: blue;
+      }
+    </style>
+  </head>
+
+  <body>
+      <h1>flex-wrap:nowrap (default)</h1>
+      <div class="container1">
+        <div class="item item1"><p>1</p></div>
+        <div class="item item2"><p>2</p></div>
+        <div class="item item3"><p>3</p></div>
+        <div class="item item4"><p>4</p></div>
+        <div class="item item5"><p>5</p></div>
+      </div>
+      <h1>flex-wrap:wrap</h1>
+      <div class="container2">
+        <div class="item item1"><p>1</p></div>
+        <div class="item item2"><p>2</p></div>
+        <div class="item item3"><p>3</p></div>
+        <div class="item item4"><p>4</p></div>
+        <div class="item item5"><p>5</p></div>
+      </div>
+      <h1>flex-wrap:wrap-reverse</h1>
+      <div class="container3">
+        <div class="item item1"><p>1</p></div>
+        <div class="item item2"><p>2</p></div>
+        <div class="item item3"><p>3</p></div>
+        <div class="item item4"><p>4</p></div>
+        <div class="item item5"><p>5</p></div>
+      </div>
+  </body>
+</html>

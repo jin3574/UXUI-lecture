@@ -1,0 +1,53 @@
+.card {
+  width: 200px;
+  height: 150px;
+  border: 1px solid black;
+}
+
+.box {
+  width: 50px;
+  height: 50px;
+  background: red;
+  /* static: 위치 고정 */
+  position: static;
+  top: 20px;
+  left: 20px;
+}
+
+.box2 {
+  width: 50px;
+  height: 50px;
+  background: red;
+  /* relative: 자신 기준 이동, 원래 위치(static 위치)에는 다른 요소 위치X, 전체 레이아웃 꺠지지X */
+  position: relative;
+  top: 20px;
+  left: 20px;
+}
+
+.card3 {
+  width: 200px;
+  height: 150px;
+  border: 1px solid black;
+
+  position: relative;
+}
+.box3 {
+  width: 50px;
+  height: 50px;
+  background: red;
+  /* 부모: relative, 자식: absolute */
+  /* 부모 position 지정 없으면 body 기준 */
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.box4 {
+  width: 50px;
+  height: 50px;
+  background: red;
+  /* 화면 기준 고정 (스크롤해도 사라지지X) */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
